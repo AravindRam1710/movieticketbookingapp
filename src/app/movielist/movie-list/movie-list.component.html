@@ -1,0 +1,24 @@
+<h3 class="p-3 text-center font-styling">List of New Arrivals</h3>
+<div class="container">
+<table class="table table-striped table-bordered" style="border: solid;border-color: cornflowerblue;">
+    <tr>
+        <th class="font-styling" *ngFor="let column of headers">
+            {{column}}
+        </th>
+    </tr>
+     <tr *ngFor="let row of rows">
+        <td class="font-styling">
+            {{row.id}}
+        </td>
+        <td class="font-styling"> 
+            {{row.Language}}
+        </td>
+        <td class="font-styling">
+            {{row.MovieName}}
+        </td>
+        <td class="font-styling">
+            {{row.Rating}}
+        </td>
+    </tr> 
+</table>
+</div>

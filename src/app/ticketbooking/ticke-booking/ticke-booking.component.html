@@ -1,0 +1,43 @@
+<div class="d-flex flex-column">
+    <div class="container align-self-center">
+        <h2 class="text-center font-styling">Ticket Booking</h2>
+            <form class="form-group" [formGroup]="allocateForm">
+                    <div class="form-group"> <label for="name" class="font-styling"> First Name</label>
+                        <input type="text" class="form-control font-styling" formControlName="firstName">
+                      
+                     </div>
+                     <div class="form-group"> <label for="name" class="font-styling">Movie Language</label>
+                        <select class="form-control">
+                            <option selected class="default-font">Select a Language</option>
+                            <option *ngFor="let lang of Languages">{{lang}}</option>
+                        </select>
+                        <!-- <input type="text" class="form-control" formControlName="language"> -->
+                    </div>
+                    <div class="form-group"> <label for="name" class="font-styling">Movie Name</label>
+                        
+                        <input type="text" class="form-control font-styling" formControlName="movieName">
+                        <!-- <span *ngIf=" allocateForm.controls.processingDate.errors" class="alert alert-danger">
+                            ProcessingDate is required
+                        </span> -->
+                    </div>
+                        <div class="form-group"> <label for="name" class="font-styling">Booking Date</label>
+                            <input type="date" class="form-control font-styling" formControlName="processingDate">
+                            <!-- <span *ngIf=" allocateForm.controls.processingDate.errors" class="alert alert-danger">
+                                ProcessingDate is required
+                            </span> -->
+                        </div>
+                        <div class="form-group"> 
+                            <label for="name" id="cdate" class="font-styling">Class</label> 
+                            <select class="form-control">
+                                <option selected>Select class</option>
+                                <option>Balcony</option>
+                                <option>First Class</option>
+                            </select>
+                            </div>
+                            
+                            <button type="submit" id=register
+                            class="btn btn-primary font-styling"(click)="bookTicket()">Book Ticket</button>
+                        </form>
+                        
+            </div>
+</div>
